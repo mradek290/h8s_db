@@ -1,0 +1,98 @@
+{
+    "uacl" : [
+        {
+            "id" : 0,
+            "name" : "machine",
+            "access_level" : 9000,
+            "acl" : [
+                {
+                    "name" : "list_users",
+                    "active" : true,
+                    "lock_level" : 0
+                },
+                {
+                    "name" : "read_user_data",
+                    "active" : true,
+                    "lock_level" : 0
+                },
+                {
+                    "name" : "create_user",
+                    "active" : true,
+                    "lock_level" : 0
+                },
+                {
+                    "name" : "delete_user",
+                    "active" : true,
+                    "lock_level" : 0
+                }
+            ]
+        },
+        {
+            "id" : 1,
+            "name" : "admin",
+            "access_level" : 8000,
+            "acl" : [
+                {
+                    "name" : "list_users",
+                    "active" : true,
+                    "lock_level" : 0
+                },
+                {
+                    "name" : "read_user_data",
+                    "active" : true,
+                    "lock_level" : 0
+                },
+                {
+                    "name" : "create_user",
+                    "active" : true,
+                    "lock_level" : 0
+                },
+                {
+                    "name" : "delete_user",
+                    "active" : true,
+                    "lock_level" : 0
+                }
+            ]
+        }
+    ],
+    "users" : [
+        {
+            "id" : 19,
+            "name" : "jack",
+            "password" : "1cecra@M",
+            "misc" : "",
+            "acl" : "machine",
+            "overwrites" : [
+                {
+                    "name" : "list_users",
+                    "active" : true,
+                    "lock_level" : 100
+                },
+                {
+                    "name" : "create_user",
+                    "active" : false,
+                    "locklevel" : 800
+                }
+            ]
+        },
+        {
+            "id" : 31,
+            "name" : "anna",
+            "password" : "teddybear01",
+            "misc" : "subscribe to pewdiepie",
+            "acl" : "machine",
+            "overwrites" : [
+                {
+                    "name" : "list_users",
+                    "active" : true,
+                    "lock_level" : 100
+                },
+                {
+                    "name" : "create_user",
+                    "active" : false,
+                    "locklevel" : 800
+                }
+            ]
+        }
+    ]
+}

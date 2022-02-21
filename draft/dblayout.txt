@@ -1,0 +1,65 @@
+administrative actions
+
+    user management
+        list users
+        read user data
+        create user
+        delete user
+        change user data
+        change user privilege (individual)
+        change user privilege (role)
+
+     user properties
+        id, name, password, misc
+        privilege (role)
+        privilege (individual,role)
+        
+    privilege management
+        list privileges
+        read privileges
+        create privileges
+        change privileges
+        delete privileges
+
+    privilege properties
+        is active, lock level
+
+    privilege role properties
+        id, name, access level
+        privilege list
+
+operative actions
+
+    database action
+
+        list databases
+        create database
+        delete database
+        flush database
+        rename database
+        lock database
+        unlock database
+        
+        list descriptor
+        add descriptor
+        remote descritpor
+        rename descriptor
+        edit attribute
+
+        add privilege overwrite
+        remove privilege overwrite
+        edite privilege overwrite
+
+        read data
+        edit data
+        delete data
+        flush data
+
+
+misc actions
+    allocate file
+    log on
+    initialize
+    start
+    stop
+    log message

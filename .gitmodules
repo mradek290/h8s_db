@@ -1,0 +1,6 @@
+[submodule "cjson"]
+	path = cjson
+	url = https://github.com/mradek290/cjson.git
+[submodule "comlinehandler"]
+	path = comlinehandler
+	url = https://github.com/mradek290/comlinehandler.git

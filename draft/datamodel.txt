@@ -1,0 +1,41 @@
+data types
+    bool
+    signed byte
+    signed short
+    signed long
+    signed long long
+    unsigned byte
+    unsigned short
+    unsigned long
+    unsigned long long
+
+    float
+    double
+
+    bytestream[length,bytes]
+    ascii (string)
+
+    timestamp (ull)
+    id (ull)
+
+attributes
+    mandatory
+    autofill
+    unique (requires utable)
+    
+
+hierachy
+    
+    database
+	id , name, ordinal
+        privilege overwrites (role,individual)
+
+    database descriptor
+        [datatype, name, attribute]
+
+    data clusters
+        {according to descriptor}
+
+    data set
+        internal id, is set
+        {cluster corssection}

@@ -1,0 +1,14 @@
+.\
+.\users.json (users and privileges)
+
+.\data\
+.\data\[database]\
+.\data\[database]\descriptor.json
+.\data\[database]\[cluster]
+.\data\[database]\[utable]
+
+.\config.json
+.\meta.json
+
+.\logs\
+.\logs\[logfiles]

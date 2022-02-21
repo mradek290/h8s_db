@@ -1,0 +1,56 @@
+{
+    "id" : 7,
+    "name" : "Personen",
+    "descriptor" : [
+        {
+            "name" : "Vorname",
+            "type" : "string",
+            "ordinal" : 0,
+            "mandatory" : true,
+            "autofill" : false,
+            "unique" : "personen-utable-file"
+        },
+        {
+            "name" : "Geburtsdatum",
+            "type" : "timestamp",
+            "ordinal" : 1,
+            "mandatory" : false,
+            "autofill" : false,
+            "unique" : "geburtsdatum-utable-file"
+        }
+    ],
+    "uacl_overwrite" : [
+        {
+            "id" : 19,
+            "uacl" : "admin",
+            "acl" : [
+                {
+                    "name" : "list_database",
+                    "active" : true,
+                    "locklevel" : 800
+                },
+                {
+                    "name" : "create_user",
+                    "active" : false,
+                    "locklevel" : 700
+                }
+            ]
+        },
+        {
+            "id" : 19,
+            "uacl" : "admin",
+            "acl" : [
+                {
+                    "name" : "list_database",
+                    "active" : true,
+                    "locklevel" : 800
+                },
+                {
+                    "name" : "create_user",
+                    "active" : false,
+                    "locklevel" : 700
+                }
+            ]
+        }
+    ]
+}
