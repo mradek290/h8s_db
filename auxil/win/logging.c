@@ -34,7 +34,7 @@ void h8sLog( h8sLogType logtype, const char* msg ){
     char* buf = (char*) malloc(buf_sz);
 
     SYSTEMTIME st;
-    GetSystemTime(&st);
+    GetLocalTime(&st);
     
     DWORD dummy;
     unsigned output_sz = sprintf(
