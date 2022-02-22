@@ -1,0 +1,5 @@
+
+#ifndef H8SDB_LOGGING_HEADER
+#define H8SDB_LOGGING_HEADER
+
+#endif
