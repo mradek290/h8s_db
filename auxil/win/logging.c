@@ -17,15 +17,19 @@ void h8sInitLog(){
 
 const char* h8sGetLogTypeName( h8sLogType x ){
     switch(x){
-        case h8slog_Info      : return "Information";
-        case h8slog_Error     : return "Error";
-        case h8slog_Warning   : return "Warning";
-        case h8slog_Invariant : return "Invariant";
+        case h8slog_Info      : return "INF";
+        case h8slog_Error     : return "ERR";
+        case h8slog_Warning   : return "WRN";
+        case h8slog_Debug     : return "DBG";
         default : return "Invalid Logging Type!";
     }
 }
 
 void h8sLog( h8sLogType logtype, const char* msg ){
+
+#ifndef H8SDB_DEBUG
+    if( logtype == h8slog_Debug ) return;
+#endif
 
     if( cfstrNullOrEmpty(msg) ) return;
 
@@ -39,7 +43,7 @@ void h8sLog( h8sLogType logtype, const char* msg ){
     DWORD dummy;
     unsigned output_sz = sprintf(
         buf,
-        "[%0.5u%12s %0.2d.%0.2d.%0.4d %0.2d:%0.2d:%0.2d.%0.3d] %s\r\n",
+        "[%0.5u%4s %0.2d.%0.2d.%0.4d %0.2d:%0.2d:%0.2d.%0.3d] %s\r\n",
         h8slog__counter++, h8sGetLogTypeName(logtype),
         st.wDay, st.wMonth, st.wYear,
         st.wHour, st.wMinute, st.wSecond, st.wMilliseconds,

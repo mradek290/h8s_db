@@ -8,7 +8,7 @@ typedef enum {
     h8slog_Info,
     h8slog_Error,
     h8slog_Warning,
-    h8slog_Invariant
+    h8slog_Debug
 } h8sLogType;
 
 void h8sInitLog();
