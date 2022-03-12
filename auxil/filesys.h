@@ -8,12 +8,13 @@
 
 typedef struct {
     char* AbsolutePath;
-    char* RelativePath;
+    char* Name;
     char* Extension;
     unsigned long long Size;
     _Bool IsFile;
 } h8sFileInfo;
 
-h8sFileInfo* EnumerateDirectory( const char*, unsigned* );
+h8sFileInfo* h8sEnumerateDirectory( const char*, unsigned* );
+void h8sFreeDirectoryEnumeration( h8sFileInfo*, unsigned );
 
 #endif
